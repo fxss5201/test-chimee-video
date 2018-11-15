@@ -48,10 +48,10 @@ body {
 }
 
 .img-list-box {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
-    z-index: 100;
+    z-index: 10000;
     width: 100%;
     height: 96px;
     background: rgba(0,0,0,0.4);
