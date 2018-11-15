@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>chimee</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/chimee-mobile-player.browser.css">
+    <style>
+        html, body, .wrapper {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper"></div>
+    <script src="js/chimee-mobile-player.browser.js"></script>
+    <script>
+        new ChimeeMobilePlayer({
+            wrapper: '#wrapper',  // video dom容器
+            src: 'http://video.fooww.com/FoowwUniversity/6/C6D98A13-6B27-4751-B2E4-176A4681A5D4.mp4',
+            autoplay: true,
+            controls: true,
+            playsInline: true,
+            preload: 'auto',
+            x5VideoPlayerFullscreen: true,
+            x5VideoOrientation: 'landscape|portrait',
+            xWebkitAirplay: true,
+            muted: true
+        });
+    </script>
+</body>
+</html>
