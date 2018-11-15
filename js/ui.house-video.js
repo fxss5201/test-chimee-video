@@ -124,8 +124,9 @@ $(function () {
             $("#videoMask").removeClass("loading pause error");
 
             setTimeout(function(){
+                alert(123);
                 $("#imgListWrapper").css("z-index", 10000000);
-            }, 800);
+            }, 2000);
         });
         player.on("waiting", function () {
             $("#videoMask").addClass("loading").removeClass("pause error").show();
