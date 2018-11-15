@@ -1,26 +1,94 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>chimee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+    <title>安汾路1238弄 视频看房</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/chimee-mobile-player.browser.css">
-    <style>
-        html, body, .wrapper {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="swiper4/swiper.min.css">
+    <link rel="stylesheet" href="css/ui.house-video.css">
+    <script src="js/iconfont.js"></script>
+    <script>
+        window.V = {};
+        V.HouseImagesVideoJson = [
+            {
+                "PKHouseVideo": "515ba557-50df-48e6-bb74-e8e3fd5c59cc",
+                "HouseVideoTag": "主卧",
+                "IndexImgPath": "https://img.fooww.com/group3/M04/CE/92/ZyjCHlvJpTyAfJY4AAEfBVcOU9I463.jpg",
+                "VideoPath": "https://img.fooww.com/groupa/M00/00/24/wKgBV1vJpT6AYB79AAZBT1cz5iU366.mp4"
+            }, {
+                "PKHouseVideo": "0124400e-5b8b-4021-ac4f-9f6d9c1752f0",
+                "HouseVideoTag": "主卧",
+                "IndexImgPath": "https://img.fooww.com/group6/M00/79/C0/ZyjCIVvJoGaAaK1_AABhdzUYTqk970.jpg",
+                "VideoPath": "https://img.fooww.com/groupa/M02/00/24/wKgBYFvJoGWAbBmmAA8MqtLfqvM226.mp4"
+            }, {
+                "PKHouseVideo": "ce9c0374-18d9-4fab-add9-18c8abc15a17",
+                "HouseVideoTag": "阳台",
+                "IndexImgPath": "https://img.fooww.com/group4/M02/37/07/ZyjCI1vJpUiACEpQAACjHrArz9o065.jpg",
+                "VideoPath": "https://img.fooww.com/groupa/M00/00/24/wKgBV1vJpUqAdIx7AAfUxZHQxWk285.mp4"
+            }, {
+                "PKHouseVideo": "14322504-3c55-449c-a889-8077635df2a1",
+                "HouseVideoTag": "阳台",
+                "IndexImgPath": "https://img.fooww.com/group6/M04/80/87/ZyjCIFvJpZ6AXYU5AAD--tlurK0371.jpg",
+                "VideoPath": "https://img.fooww.com/groupa/M00/00/24/wKgBYFvJpZ-ASHokAAZ92eqXT7Y058.mp4"
+            }, {
+                "PKHouseVideo": "59d29de2-7c6c-49e0-9ddc-0bb0b4abb8d0",
+                "HouseVideoTag": "厨房",
+                "IndexImgPath": "https://img.fooww.com/group4/M01/C0/70/ZyjCH1vJpVuAI1IzAADwBp2gN8I785.jpg",
+                "VideoPath": "https://img.fooww.com/groupa/M00/00/24/wKgBYFvJpV6AWNLjAA_3k-FUpDw133.mp4"
+            }, {
+                "PKHouseVideo": "0294b4aa-0c1a-4b66-87c5-b7f7aac77720",
+                "HouseVideoTag": "过道", 
+                "IndexImgPath": "https://img.fooww.com/group2/M01/AF/E8/ZyjCHVvJpXKAN9snAAD7Hn-Cgm8246.jpg", 
+                "VideoPath": "https://img.fooww.com/groupa/M00/00/24/wKgBV1vJpXOANZiIAAyEG7izeLQ759.mp4"
+            }, { 
+                "PKHouseVideo": "a468b213-c40d-4947-b012-3bb86ad2fc36", 
+                "HouseVideoTag": "过道", 
+                "IndexImgPath": "https://img.fooww.com/group1/M02/6F/9B/ZyjCJVvJpZSAD35VAAD51LlRO-E005.jpg", 
+                "VideoPath": "https://img.fooww.com/groupa/M00/00/24/wKgBYFvJpZOAOGW_AAkbXp_-Lew174.mp4" 
+            }];
+    </script>
 </head>
+
 <body>
-    <div id="wrapper">
+    <div class="wrapper" id="wrapper">
+        <!--视频-->
         <container>
             <video></video>
         </container>
+        <!-- 图片列表 -->
+        <div class="img-list-box video-hide" id="imgListWrapper">
+            <div class="img-title-box" id="imgListBtn">
+                <svg class="icon img-title-icon" aria-hidden="true">
+                    <use xlink:href="#icon-xiajiantou"></use>
+                </svg>
+                <span id="imgTitle"></span>
+            </div>
+            <div class="swiper-container img-list-swiper" id="imgListSwiper">
+                <div class="swiper-wrapper" id="imgListSlideBox">
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="no-video">
+        <span>房源视频不存在</span>
+    </div>
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/fastclick.min.js"></script>
+    <script src="swiper4/swiper.min.js"></script>
     <script src="js/chimee-mobile-player.browser.js"></script>
+    <script src="js/ui.house-video.js?_v=1.11.20181113"></script>
+
+
+
+    
     <script>
         new ChimeeMobilePlayer({
             wrapper: '#wrapper',
@@ -38,4 +106,5 @@
         });
     </script>
 </body>
+
 </html>

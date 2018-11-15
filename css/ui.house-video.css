@@ -1,0 +1,159 @@
+html, body {
+    min-width: 320px;
+    font-family: "Microsoft YaHei", Arial, Helvetica, "宋体", sans-serif;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    background: #fff;
+    height: 100%;
+}
+
+body {
+    position: relative;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: '.';
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.wrapper {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.img-list-box {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+    height: 96px;
+    background: rgba(0,0,0,0.4);
+}
+
+.img-title-box {
+    padding: 0 14px;
+    font-size: 12px;
+    color: #fff;
+    height: 32px;
+    line-height: 32px;
+}
+
+.img-title-icon {
+    margin: 3px 0;
+    font-size: 26px;
+    vertical-align: top;
+}
+
+.img-list-swiper {
+    margin: 0 0 0 14px;
+    height: 52px;
+}
+
+    .img-list-swiper .swiper-slide {
+        box-sizing: border-box;
+        width: 52px;
+        height: 52px;
+    }
+
+.img-item {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.img-item-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 12px;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+}
+
+.video-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.video {
+    width: 100%;
+    object-fit: contain;
+    object-position: center center;
+}
+
+.videoCur {
+    border: 2px solid #439BFD;
+}
+
+.thumb-icon {
+    display: none;
+    position: absolute;
+    top: 7px;
+    left: 15px;
+    z-index: 10;
+    width: 22px;
+    height: 22px;
+}
+
+.videoCur .thumb-icon {
+    display: block;
+    top: 5px;
+    left: 13px;
+}
+
+.video-pause-icon {
+    background: url(../images/house-video-icon.png);
+    background-size: contain;
+}
+
+.video-play-icon {
+    background: url(../images/house-video-playing-icon.png);
+    background-size: contain;
+}
+
+body .once-hidden {
+    display: none;
+}
+
+.no-video {
+    height: 100%;
+    text-align: center;
+    display: none;
+    align-items: center;
+}
+
+    .no-video span {
+        flex: 1;
+    }
