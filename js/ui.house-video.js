@@ -122,6 +122,10 @@ $(function () {
                 videoObj.thumbImgToggle();
             }, 3000);
             $("#videoMask").removeClass("loading pause error");
+
+            setTimeout(function(){
+                $("#imgListWrapper").css("z-index", 10000000);
+            }, 800);
         });
         player.on("waiting", function () {
             $("#videoMask").addClass("loading").removeClass("pause error").show();
